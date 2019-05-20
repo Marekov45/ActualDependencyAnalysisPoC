@@ -5,6 +5,7 @@ import de.hhn.it.wolves.domain.*;
 import org.apache.maven.artifact.repository.ArtifactRepository;
 import org.apache.maven.artifact.repository.DefaultArtifactRepository;
 import org.apache.maven.artifact.repository.layout.DefaultRepositoryLayout;
+import org.apache.maven.model.Build;
 import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.apache.maven.plugin.AbstractMojo;
@@ -15,8 +16,11 @@ import org.apache.maven.project.MavenProject;
 import org.apache.maven.project.MavenProjectBuilder;
 import org.apache.maven.project.ProjectBuildingException;
 import org.apache.maven.shared.invoker.*;
+import org.codehaus.plexus.DefaultPlexusContainer;
+import org.codehaus.plexus.PlexusContainerException;
 import org.codehaus.plexus.context.Context;
 import org.codehaus.plexus.context.ContextException;
+import org.codehaus.plexus.context.DefaultContext;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -50,7 +54,7 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
 
         MavenXpp3Reader mavenreader = new MavenXpp3Reader();
         try {
-             f = new File("C:/Users/Marvin/Documents/GitHub/example-java-maven/pom.xml");
+             f = new File("/Users/westersm/Documents/tmp/JavaVulnerableLab/pom.xml");
             reader = new FileReader(f);
             model = mavenreader.read(reader);
             model.setPomFile(f);
@@ -59,18 +63,21 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
         MavenProject project = new MavenProject(model);
 
         InvocationRequest request = new DefaultInvocationRequest();
-        request.setPomFile(new File("C:/Users/Marvin/Documents/GitHub/example-java-maven/pom.xml"));
+        request.setPomFile(new File("/Users/westersm/Documents/tmp/JavaVulnerableLab/pom.xml"));
         request.setGoals(Collections.singletonList("compile"));
 
         Invoker invoker = new DefaultInvoker();
         try {
+            invoker.setMavenHome(new File("/usr/local/Cellar/maven/3.6.1/libexec"));
             invoker.execute(request);
         } catch (MavenInvocationException e) {
             e.printStackTrace();
         }
-        File outputDirectory = new File("C:/Users/Marvin/Documents/GitHub/example-java-maven/target");
+        File outputDirectory = new File("/Users/westersm/Documents/tmp/JavaVulnerableLab/target/");
       //  String analyzer = "maven-dependency-analyzer";
 
+        project.getModel().getBuild().setOutputDirectory(outputDirectory.getAbsolutePath());
+        project.getModel().getBuild().setTestOutputDirectory(outputDirectory.getAbsolutePath());
        AnalyzeMojo mojo = new AnalyzeMojo();
         try {
             Field projectField = mojo.getClass().getSuperclass().getDeclaredField("project");
@@ -79,6 +86,9 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
             Field outputDirectoryField = mojo.getClass().getSuperclass().getDeclaredField("outputDirectory");
             outputDirectoryField.setAccessible(true);
             outputDirectoryField.set(mojo,outputDirectory);
+            Field analyzerField = mojo.getClass().getSuperclass().getDeclaredField("analyzer");
+            analyzerField.setAccessible(true);
+            analyzerField.set(mojo, "default");
             //Field analyzerField = mojo.getClass().getSuperclass().getDeclaredField("analyzer");
            // analyzerField.setAccessible(true);
            // analyzerField.set(mojo,analyzer);
@@ -91,10 +101,17 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
 
 
         try {
+            Context c = new DefaultContext();
+            c.put("plexus", new DefaultPlexusContainer());
+            mojo.contextualize(c);
             mojo.execute();
         } catch (MojoExecutionException e) {
             e.printStackTrace();
         } catch (MojoFailureException e) {
+            e.printStackTrace();
+        } catch (ContextException e) {
+            e.printStackTrace();
+        } catch (PlexusContainerException e) {
             e.printStackTrace();
         }
         return new ActualDependencyAnalysisResult(info);
