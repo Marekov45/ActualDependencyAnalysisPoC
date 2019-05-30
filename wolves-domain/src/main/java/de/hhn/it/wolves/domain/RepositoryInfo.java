@@ -17,7 +17,7 @@ public class RepositoryInfo {
         this.id = "000000";
         this.repoName = "example-java-maven";
         this.description = "An example maven project to demonstrate srcclr scans.";
-        this.localRepoPath = new File("C:/Users/Marvin/Documents/GitHub/example-java-maven");
+        this.localRepoPath = new File("C:/Users/Marvin/Documents/GitHub/maven-simple");
         this.language = ProgrammingLanguage.JAVA;
     }
 
