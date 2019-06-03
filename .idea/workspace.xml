@@ -5,12 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer/src/main/java/de/hhn/it/wolves/plugins/actualdependencyanalyzer/ActualDependencyAnalyserPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer/src/main/java/de/hhn/it/wolves/plugins/actualdependencyanalyzer/ActualDependencyAnalyserPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer/target/classes/de/hhn/it/wolves/plugins/actualdependencyanalyzer/ActualDependencyAnalyserPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer/target/classes/de/hhn/it/wolves/plugins/actualdependencyanalyzer/ActualDependencyAnalyserPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wolves-domain/src/main/java/de/hhn/it/wolves/domain/RepositoryInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/wolves-domain/src/main/java/de/hhn/it/wolves/domain/RepositoryInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wolves-domain/target/classes/de/hhn/it/wolves/domain/RepositoryInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/wolves-domain/target/classes/de/hhn/it/wolves/domain/RepositoryInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wolves-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wolves-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,38 +31,81 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer/src/main/java/de/hhn/it/wolves/plugins/actualdependencyanalyzer/ActualDependencyAnalyserPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+            <state relative-caret-position="98">
+              <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-dependency-plugin/3.1.1/maven-dependency-plugin-3.1.1-sources.jar!/org/apache/maven/plugins/dependency/analyze/AbstractAnalyzeMojo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="303" selection-start-line="303" selection-end-line="303" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2-sources.jar!/org/codehaus/plexus/DefaultPlexusContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="228" selection-start-line="228" selection-end-line="228" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#22501#22508#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/3.0/maven-model-3.0.jar!/org/apache/maven/model/io/xpp3/MavenXpp3Writer.class">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/HashSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+            <state relative-caret-position="100">
+              <caret line="219" selection-start-line="219" selection-end-line="219" />
+              <folding>
+                <element signature="e#8045#8046#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/io/FileOutputStream.java">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1264">
-              <caret line="185" column="11" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
+            <state relative-caret-position="100">
+              <caret line="606" selection-start-line="606" selection-end-line="606" />
+              <folding>
+                <element signature="e#24283#24284#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wolves-domain/src/main/java/de/hhn/it/wolves/domain/RepositoryInfo.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-dependency-analyzer/1.11.1/maven-dependency-analyzer-1.11.1-sources.jar!/org/apache/maven/shared/dependency/analyzer/DefaultProjectDependencyAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="41">
+              <caret line="131" column="41" selection-start-line="131" selection-start-column="41" selection-end-line="131" selection-end-column="41" />
+              <folding>
+                <element signature="e#2716#2726#0" expanded="true" />
+                <element signature="e#2881#2891#0" expanded="true" />
+                <element signature="e#3075#3085#0" expanded="true" />
+                <element signature="e#4733#4756#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-core/3.0/maven-core-3.0-sources.jar!/org/apache/maven/project/MavenProject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="1085" column="70" lean-forward="true" selection-start-line="1085" selection-start-column="70" selection-end-line="1085" selection-end-column="70" />
+              <folding>
+                <element signature="e#6868#6869#0" expanded="true" />
+                <element signature="e#6901#6902#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,6 +173,18 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="actual-dependency-analysis-plugin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="actual-dependency-analysis-result-consumer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="actual-dependency-analysis-stats-generator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="actual-dependency-analyzer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -145,37 +194,27 @@
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="wolves-domain" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="wolves-domain" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="wolves-plugin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="wolves-plugin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+          <item name="actual-dependency-analyzer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.apache.maven.plugins:maven-dependency-plugin:maven-plugin:3.1.1" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="68" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="240" />
+    <option name="y" value="126" />
+    <option name="width" value="1440" />
+    <option name="height" value="765" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,71 +265,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analysis-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analysis-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-              <item name="it" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analysis-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-              <item name="it" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analysis-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-              <item name="it" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analysis-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="actual-dependency-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-              <item name="it" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
               <item name="actualdependencyanalyzer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,74 +293,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-              <item name="it" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-              <item name="it" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ActualDependencyAnalysisPoC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ActualDependencyAnalysisPoC" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves-domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="hhn" type="462c0819:PsiDirectoryNode" />
-              <item name="it" type="462c0819:PsiDirectoryNode" />
-              <item name="wolves" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/javaparser-maven-sample" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DepcheckAnalysisPoC" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -493,11 +410,13 @@
       <workItem from="1558801325787" duration="330000" />
       <workItem from="1558825918934" duration="685000" />
       <workItem from="1559220988673" duration="4895000" />
+      <workItem from="1559484245125" duration="674000" />
+      <workItem from="1559571571532" duration="5076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79001000" />
+    <option name="totallyTimeSpent" value="84751000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,10 +428,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="68" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1319838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -521,23 +440,23 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.63643724" visible="true" weight="0.42" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.77489877" weight="0.3888889" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6356275" visible="true" weight="0.41918296" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6793522" weight="0.38543516" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49716598" weight="0.23444444" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.36356276" side_tool="true" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48663968" weight="0.32777777" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.36437246" side_tool="true" visible="true" weight="0.41918296" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48663968" weight="0.3268206" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.14765458" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.345749" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="CDI" order="6" />
@@ -545,40 +464,6 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24200426" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Learn" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63643724" weight="0.42" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.77489877" visible="true" weight="0.3888889" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49716598" weight="0.23444444" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.36356276" side_tool="true" weight="0.3285968" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48663968" weight="0.32777777" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.14765458" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="CDI" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -623,83 +508,30 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-dependency-plugin/3.1.1/maven-dependency-plugin-3.1.1-sources.jar!/org/apache/maven/plugins/dependency/analyze/AbstractAnalyzeMojo.java</url>
+          <line>271</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-dependency-plugin/3.1.1/maven-dependency-plugin-3.1.1-sources.jar!/org/apache/maven/plugins/dependency/analyze/AbstractAnalyzeMojo.java</url>
+          <line>303</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((DefaultProjectDependencyAnalyzer)this).classAnalyzer" custom="org.apache.maven.shared.dependency.analyzer.DefaultProjectDependencyAnalyzer" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar!/org/sonatype/guice/plexus/locators/MissingPlexusBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar!/org/sonatype/guice/plexus/locators/GlobalPlexusBeans.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar!/org/sonatype/guice/plexus/locators/RealmPlexusBeans.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#605#606#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar!/com/google/inject/internal/Annotations.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="103" column="29" selection-start-line="103" selection-start-column="29" selection-end-line="103" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar!/org/sonatype/guice/plexus/locators/DefaultPlexusBeanLocator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar!/com/google/inject/internal/util/Preconditions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar!/com/google/inject/name/Names.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#474#475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar!/org/sonatype/guice/bean/locators/DefaultBeanLocator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar!/org/sonatype/guice/bean/locators/NotifyingBeans.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar!/com/google/inject/internal/util/Hashing.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar!/com/google/inject/internal/util/ImmutableMap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -899,20 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar!/org/codehaus/plexus/DefaultPlexusContainer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-dependency-plugin/3.1.1/maven-dependency-plugin-3.1.1.jar!/org/apache/maven/plugins/dependency/analyze/AbstractAnalyzeMojo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="141" column="80" selection-start-line="141" selection-start-column="80" selection-end-line="141" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/3.0/maven-model-3.0.jar!/org/apache/maven/model/Model.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -946,13 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-dependency-analyzer/1.11.1/maven-dependency-analyzer-1.11.1.jar!/org/apache/maven/shared/dependency/analyzer/DefaultProjectDependencyAnalyzer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-dependency-analyzer/1.11.1/maven-dependency-analyzer-1.11.1.jar!/org/apache/maven/shared/dependency/analyzer/asm/ASMDependencyAnalyzer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -964,13 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wolves-domain/src/main/java/de/hhn/it/wolves/domain/RepositoryInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1034,27 +838,141 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/3.0/maven-model-3.0.jar!/org/apache/maven/model/io/xpp3/MavenXpp3Writer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/io/FileOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1264">
+        <state relative-caret-position="2703">
           <caret line="185" column="11" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/3.0/maven-model-3.0.jar!/org/apache/maven/model/io/xpp3/MavenXpp3Writer.class">
+    <entry file="file://$PROJECT_DIR$/wolves-domain/src/main/java/de/hhn/it/wolves/domain/RepositoryInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        <state relative-caret-position="255">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar!/org/codehaus/plexus/DefaultPlexusContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-dependency-analyzer/1.11.1/maven-dependency-analyzer-1.11.1.jar!/org/apache/maven/shared/dependency/analyzer/ClassAnalyzer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-dependency-plugin/3.1.1/maven-dependency-plugin-3.1.1.jar!/org/apache/maven/plugins/dependency/analyze/AbstractAnalyzeMojo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/3.0/maven-model-3.0-sources.jar!/org/apache/maven/model/io/xpp3/MavenXpp3Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="113" column="7" lean-forward="true" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-dependency-analyzer/1.11.1/maven-dependency-analyzer-1.11.1-sources.jar!/org/apache/maven/shared/dependency/analyzer/ClassAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-dependency-analyzer/1.11.1/maven-dependency-analyzer-1.11.1.jar!/org/apache/maven/shared/dependency/analyzer/DefaultProjectDependencyAnalyzer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-core/3.0/maven-core-3.0-sources.jar!/org/apache/maven/project/MavenProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="1085" column="70" lean-forward="true" selection-start-line="1085" selection-start-column="70" selection-end-line="1085" selection-end-column="70" />
+          <folding>
+            <element signature="e#6868#6869#0" expanded="true" />
+            <element signature="e#6901#6902#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-dependency-plugin/3.1.1/maven-dependency-plugin-3.1.1-sources.jar!/org/apache/maven/plugins/dependency/analyze/AnalyzeMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="43" column="16" lean-forward="true" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="606" selection-start-line="606" selection-end-line="606" />
+          <folding>
+            <element signature="e#24283#24284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="219" selection-start-line="219" selection-end-line="219" />
+          <folding>
+            <element signature="e#8045#8046#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2-sources.jar!/org/codehaus/plexus/DefaultPlexusContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="228" selection-start-line="228" selection-end-line="228" />
+          <folding>
+            <element signature="e#22501#22508#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-dependency-plugin/3.1.1/maven-dependency-plugin-3.1.1-sources.jar!/org/apache/maven/plugins/dependency/analyze/AbstractAnalyzeMojo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="303" selection-start-line="303" selection-end-line="303" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/maven/shared/maven-dependency-analyzer/1.11.1/maven-dependency-analyzer-1.11.1-sources.jar!/org/apache/maven/shared/dependency/analyzer/DefaultProjectDependencyAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="131" column="41" selection-start-line="131" selection-start-column="41" selection-end-line="131" selection-end-column="41" />
+          <folding>
+            <element signature="e#2716#2726#0" expanded="true" />
+            <element signature="e#2881#2891#0" expanded="true" />
+            <element signature="e#3075#3085#0" expanded="true" />
+            <element signature="e#4733#4756#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer/src/main/java/de/hhn/it/wolves/plugins/actualdependencyanalyzer/ActualDependencyAnalyserPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="98">
+          <caret line="78" column="30" lean-forward="true" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
         </state>
       </provider>
     </entry>

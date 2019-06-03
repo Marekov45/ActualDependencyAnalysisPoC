@@ -52,6 +52,7 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
             model.setPomFile(f);
 
         } catch (Exception ex) {
+            System.out.println(ex);
         }
         //fixes the problems where the build is null in some cases (the projects dont have a build element <build> in their pom file
         if (model.getBuild() == null) {
@@ -69,17 +70,29 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
 
         InvocationRequest request = new DefaultInvocationRequest();
         request.setPomFile(f);
-        request.setGoals(Collections.singletonList("compile"));
+
+        request.setGoals(Collections.singletonList("dependency:analyze"));
 
         Invoker invoker = new DefaultInvoker();
         try {
+            invoker.setMavenHome(new File(System.getenv("MAVEN_HOME")));
+            invoker.setOutputHandler(new InvocationOutputHandler() {
+                @Override
+                public void consumeLine(String line) throws IOException {
+                    if(line.startsWith("[WARNING]"))
+                        System.out.println(line);
+                }
+            });
             invoker.execute(request);
         } catch (MavenInvocationException e) {
             e.printStackTrace();
         }
+
+        /**
         File outputDirectory = new File("C:/Users/Marvin/Documents/GitHub/example-java-maven/target");
 
         System.out.println(project.getModel().getBuild()); // is null
+        System.out.println(project.getArtifacts());
         project.getModel().getBuild().setOutputDirectory(outputDirectory.getAbsolutePath());
         project.getModel().getBuild().setTestOutputDirectory(outputDirectory.getAbsolutePath());
 
@@ -116,7 +129,7 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
             e.printStackTrace();
         } catch (ContextException e) {
             e.printStackTrace();
-        }
+        } **/
         return new ActualDependencyAnalysisResult(info);
 
     }
