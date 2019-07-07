@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/actual-dependency-analysis-plugin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analysis-result-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analysis-stats-generator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/actual-dependency-analysis-plugin/actual-dependency-analyzer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wolves-domain" charset="UTF-8" />
+  </component>
+</project>

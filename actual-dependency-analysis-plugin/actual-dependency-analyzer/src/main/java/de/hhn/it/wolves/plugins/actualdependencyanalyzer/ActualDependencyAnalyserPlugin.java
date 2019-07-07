@@ -2,6 +2,10 @@ package de.hhn.it.wolves.plugins.actualdependencyanalyzer;
 
 
 import de.hhn.it.wolves.domain.*;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.maven.artifact.Artifact;
+import org.apache.maven.artifact.DefaultArtifact;
+import org.apache.maven.artifact.handler.DefaultArtifactHandler;
 import org.apache.maven.model.Build;
 import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
@@ -17,22 +21,27 @@ import org.codehaus.plexus.PlexusContainerException;
 import org.codehaus.plexus.context.Context;
 import org.codehaus.plexus.context.ContextException;
 import org.codehaus.plexus.context.DefaultContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
+import java.io.*;
 
-import java.io.IOException;
 import java.lang.reflect.Field;
 
-import java.util.Collections;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
 
+    private static final Logger logger = LoggerFactory.getLogger(ActualDependencyAnalyserPlugin.class.getName());
 
     public static void main(String[] args) throws MavenInvocationException {
+        BasicConfigurator.configure();
         RepositoryInfo repositoryInfo = new RepositoryInfo();
         ActualDependencyAnalyserPlugin plugin = new ActualDependencyAnalyserPlugin();
         plugin.analyseRepository(repositoryInfo);
@@ -71,66 +80,176 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
         InvocationRequest request = new DefaultInvocationRequest();
         request.setPomFile(f);
 
-        request.setGoals(Collections.singletonList("dependency:analyze"));
+        request.setGoals(Collections.singletonList("dependency:list"));
 
         Invoker invoker = new DefaultInvoker();
+        List<Artifact> artifacts = new ArrayList<>();
+
+
+        ArrayList<String> test = new ArrayList<>();
         try {
-            invoker.setMavenHome(new File(System.getenv("MAVEN_HOME")));
+            // invoker.setMavenHome(new File(System.getenv("MAVEN_HOME")));
             invoker.setOutputHandler(new InvocationOutputHandler() {
                 @Override
                 public void consumeLine(String line) throws IOException {
-                    if(line.startsWith("[WARNING]"))
-                        System.out.println(line);
+                    if (line.startsWith("[INFO]    ")) {
+                        test.add(line);
+                    }
+
+
                 }
             });
             invoker.execute(request);
+
+        } catch (MavenInvocationException e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < test.size(); i++) {
+            artifacts.add(buildArtifactFromString(test, i));
+        }
+
+        request.setGoals(Collections.singletonList("dependency:analyze"));
+        List<Artifact> artifacts2 = new ArrayList<>();
+
+
+        ArrayList<String> test2 = new ArrayList<>();
+        try {
+            // invoker.setMavenHome(new File(System.getenv("MAVEN_HOME")));
+            invoker.setOutputHandler(new InvocationOutputHandler() {
+                @Override
+                public void consumeLine(String line) throws IOException {
+                    if (line.startsWith("[WARNING] Unused declared") || line.startsWith("[WARNING]    ")) {
+                        test2.add(line);
+                    }
+
+
+                }
+            });
+            invoker.execute(request);
+
         } catch (MavenInvocationException e) {
             e.printStackTrace();
         }
 
-        /**
-        File outputDirectory = new File("C:/Users/Marvin/Documents/GitHub/example-java-maven/target");
-
-        System.out.println(project.getModel().getBuild()); // is null
-        System.out.println(project.getArtifacts());
-        project.getModel().getBuild().setOutputDirectory(outputDirectory.getAbsolutePath());
-        project.getModel().getBuild().setTestOutputDirectory(outputDirectory.getAbsolutePath());
-
-        AnalyzeMojo mojo = new AnalyzeMojo();
-        try {
-            Field projectField = mojo.getClass().getSuperclass().getDeclaredField("project");
-            projectField.setAccessible(true);
-            projectField.set(mojo, project);
-            Field outputDirectoryField = mojo.getClass().getSuperclass().getDeclaredField("outputDirectory");
-            outputDirectoryField.setAccessible(true);
-            outputDirectoryField.set(mojo, outputDirectory);
-            Field analyzerField = mojo.getClass().getSuperclass().getDeclaredField("analyzer");
-            analyzerField.setAccessible(true);
-            analyzerField.set(mojo, "default");
-
-
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
+        String mavenText = "[WARNING] Unused declared dependencies found:";
+        //   if (!mavenPluginOutput.contains(mavenText)) {
+        //       logger.info("This project has no unused declared dependencies.");
+        //   return new AnalysisResultWithoutProcessing(repositoryInformation, getUniqueName());
+        //   }
+        for (int i = getUnusedDependencyIndex(test2, mavenText) + 1; i < test2.size(); i++) {
+            artifacts2.add(buildArtifactFromString(test2, i));
         }
+        System.out.println(artifacts);
+        System.out.println(artifacts2);
+        String seperator = ";";
 
-
+        List<String> lines = new ArrayList<>();
+        lines.add("Dependency;Version;Unused");
+        for (Artifact artifact : artifacts) {
+            StringBuilder sb = new StringBuilder(artifact.getArtifactId());
+            sb.append(seperator).append(artifact.getVersion());
+            for (Artifact a : artifacts2) {
+                if (a.equals(artifact)) {
+                    sb.append(seperator).append("X");
+                }
+            }
+            lines.add(sb.toString());
+        }
+        BufferedWriter writer = null;
         try {
-            Context c = new DefaultContext();
-            c.put("plexus", new DefaultPlexusContainer());
-            mojo.contextualize(c);
-            mojo.execute();
-        } catch (MojoExecutionException e) {
-            e.printStackTrace();
-        } catch (MojoFailureException e) {
-            e.printStackTrace();
-        } catch (PlexusContainerException e) {
-            e.printStackTrace();
-        } catch (ContextException e) {
-            e.printStackTrace();
-        } **/
+            writer = new BufferedWriter(new FileWriter("C://Users//Marvin//Documents//Studium//BACHELOR THESIS/" + "/report.csv"));
+            for (String string : lines) {
+                writer.write(string);
+                writer.newLine();
+            }
+        } catch (IOException e) {
+
+        } finally {
+            if (writer != null)
+                try {
+                    writer.close();
+                } catch (IOException e) {
+
+                }
+        }
+        int vulnerable = 3;
+        int notVulnerable = 0;
+        logger.info("WE FOUND:\n{} projects with unused dependencies\n{} projects with no unused dependencies", vulnerable, notVulnerable);
+      String unUsedString = "";
+       for(Artifact a : artifacts2) {
+           unUsedString = "\n-" + a.getArtifactId();
+
+           logger.info("For example-java-maven we found the following unused Dependencies:" + unUsedString);
+       }
+        /**
+         File outputDirectory = new File("C:/Users/Marvin/Documents/GitHub/example-java-maven/target");
+
+         System.out.println(project.getModel().getBuild()); // is null
+         System.out.println(project.getArtifacts());
+         project.getModel().getBuild().setOutputDirectory(outputDirectory.getAbsolutePath());
+         project.getModel().getBuild().setTestOutputDirectory(outputDirectory.getAbsolutePath());
+
+         AnalyzeMojo mojo = new AnalyzeMojo();
+         try {
+         Field projectField = mojo.getClass().getSuperclass().getDeclaredField("project");
+         projectField.setAccessible(true);
+         projectField.set(mojo, project);
+         Field outputDirectoryField = mojo.getClass().getSuperclass().getDeclaredField("outputDirectory");
+         outputDirectoryField.setAccessible(true);
+         outputDirectoryField.set(mojo, outputDirectory);
+         Field analyzerField = mojo.getClass().getSuperclass().getDeclaredField("analyzer");
+         analyzerField.setAccessible(true);
+         analyzerField.set(mojo, "default");
+
+
+         } catch (IllegalAccessException e) {
+         e.printStackTrace();
+         } catch (NoSuchFieldException e) {
+         e.printStackTrace();
+         }
+
+
+         try {
+         Context c = new DefaultContext();
+         c.put("plexus", new DefaultPlexusContainer());
+         mojo.contextualize(c);
+         mojo.execute();
+         } catch (MojoExecutionException e) {
+         e.printStackTrace();
+         } catch (MojoFailureException e) {
+         e.printStackTrace();
+         } catch (PlexusContainerException e) {
+         e.printStackTrace();
+         } catch (ContextException e) {
+         e.printStackTrace();
+         } **/
         return new ActualDependencyAnalysisResult(info);
+
+    }
+
+    private int getUnusedDependencyIndex(ArrayList<String> output, String startingPoint) {
+        String text = startingPoint;
+        int index = 0;
+        int counter = 0;
+        for (String start : output) {
+            if (start.equals(text)) {
+                index = counter;
+            }
+            counter++;
+        }
+        return index;
+    }
+
+    private Artifact buildArtifactFromString(ArrayList<String> pluginOutput, int unusedDependencyIndex) {
+        String line = pluginOutput.get(unusedDependencyIndex);
+        String splitValues[] = line.split(":|\\s+");
+        String groupId = splitValues[1];
+        String artifactId = splitValues[2];
+        String type = splitValues[3];
+        String version = splitValues[4];
+        String scope = splitValues[5];
+        Artifact artifact = new DefaultArtifact(groupId, artifactId, version, scope, type, null, new DefaultArtifactHandler());
+        return artifact;
 
     }
 }
