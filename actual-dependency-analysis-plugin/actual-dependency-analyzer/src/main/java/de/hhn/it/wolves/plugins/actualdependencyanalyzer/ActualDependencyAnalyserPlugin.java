@@ -2,6 +2,7 @@ package de.hhn.it.wolves.plugins.actualdependencyanalyzer;
 
 
 import de.hhn.it.wolves.domain.*;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.artifact.DefaultArtifact;
@@ -55,7 +56,7 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
 
         MavenXpp3Reader mavenreader = new MavenXpp3Reader();
         try {
-            f = new File("C:/Users/Marvin/Documents/GitHub/example-java-maven/pom.xml");
+            f = new File("C:/Users/Marvin/IdeaProjects/JavaDeveloperFinalProject/pom.xml");
             reader = new FileReader(f);
             model = mavenreader.read(reader);
             model.setPomFile(f);
@@ -118,7 +119,7 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
             invoker.setOutputHandler(new InvocationOutputHandler() {
                 @Override
                 public void consumeLine(String line) throws IOException {
-                    if (line.startsWith("[WARNING] Unused declared") || line.startsWith("[WARNING]    ")) {
+                    if (line.startsWith("[WARNING] Used undeclared") || line.startsWith("[WARNING] Unused declared") || line.startsWith("[WARNING]    ")) {
                         test2.add(line);
                     }
 
@@ -130,17 +131,69 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
         } catch (MavenInvocationException e) {
             e.printStackTrace();
         }
+        test2.add("END");
+        System.out.println(test2);
+        if (test2.get(0).equals("[WARNING] Used undeclared dependencies found:") ||test2.get(0).equals("END") ) {
+            test2.remove(0);
+        }
+        if(!test2.contains("[WARNING] Used undeclared dependencies found:") && !test2.contains("[WARNING] Unused declared dependencies found:")){
+            test2.clear();
+            System.out.println(test2);
+        }
+        // Problem: multi module maven projects are analyzed for every single module--> duplicates and used undeclared dependencies
+        // would be mixed with unused declared dependencies and give wrong results
+        String listString = String.join(" ", test2);
+        System.out.println(listString);
+        if (test2.contains("[WARNING] Used undeclared dependencies found:")) {
+            String deps[] = StringUtils.substringsBetween(listString, "[WARNING] Unused declared dependencies found: ", "[WARNING] Used undeclared dependencies found:");
+            System.out.println(Arrays.toString(deps));
+            List<String> splitDependencies = new ArrayList<>();
+            for (String dependency : deps) {
+                splitDependencies.addAll(Arrays.asList(dependency.split("\\s+")));
+            }
+            //remove warnings
+            for (int i = 0; i < splitDependencies.size(); i++) {
+                if (splitDependencies.get(i).equals("[WARNING]")) {
+                    splitDependencies.remove(i);
+                }
+            }
 
-        String mavenText = "[WARNING] Unused declared dependencies found:";
+            System.out.println(splitDependencies);
+        }
+        if(!test2.isEmpty() && test2.contains("[WARNING] Unused declared dependencies found:")) {
+            String onlyUnusedDeclared[] = StringUtils.substringsBetween(listString, "[WARNING] Unused declared dependencies found: ", "END");
+            System.out.println(Arrays.toString(onlyUnusedDeclared));
+            List<String> splitDependencies = new ArrayList<>();
+            for (String dependency : onlyUnusedDeclared) {
+                splitDependencies.addAll(Arrays.asList(dependency.split("\\s+")));
+            }
+            //remove warnings
+            for (int i = 0; i < splitDependencies.size(); i++) {
+                if (splitDependencies.get(i).equals("[WARNING]")) {
+                    splitDependencies.remove(i);
+                }
+            }
+            System.out.println(splitDependencies);
+        }
+                String mavenText = "[WARNING] Unused declared dependencies found:";
         //   if (!mavenPluginOutput.contains(mavenText)) {
         //       logger.info("This project has no unused declared dependencies.");
         //   return new AnalysisResultWithoutProcessing(repositoryInformation, getUniqueName());
         //   }
         for (int i = getUnusedDependencyIndex(test2, mavenText) + 1; i < test2.size(); i++) {
-            artifacts2.add(buildArtifactFromString(test2, i));
+            if (!test2.get(i).equals("[WARNING] Unused declared dependencies found:") && !test2.get(i).equals("[WARNING] Used undeclared dependencies found:")) {
+                artifacts2.add(buildArtifactFromString(test2, i));
+            }
         }
-        System.out.println(artifacts);
-        System.out.println(artifacts2);
+        // System.out.println(artifacts);
+        List<Artifact> noDuplicateArtifacts = new ArrayList<>();
+        for (Artifact element : artifacts2) {
+            if (!noDuplicateArtifacts.contains(element)) {
+                noDuplicateArtifacts.add(element);
+            }
+        }
+        // System.out.println(noDuplicateArtifacts);
+        // System.out.println(artifacts2);
         String seperator = ";";
 
         List<String> lines = new ArrayList<>();
@@ -175,12 +228,12 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
         int vulnerable = 3;
         int notVulnerable = 0;
         logger.info("WE FOUND:\n{} projects with unused dependencies\n{} projects with no unused dependencies", vulnerable, notVulnerable);
-      String unUsedString = "";
-       for(Artifact a : artifacts2) {
-           unUsedString = "\n-" + a.getArtifactId();
+        String unUsedString = "";
+        for (Artifact a : artifacts2) {
+            unUsedString = "\n-" + a.getArtifactId();
 
-           logger.info("For example-java-maven we found the following unused Dependencies:" + unUsedString);
-       }
+            logger.info("For example-java-maven we found the following unused Dependencies:" + unUsedString);
+        }
         /**
          File outputDirectory = new File("C:/Users/Marvin/Documents/GitHub/example-java-maven/target");
 
@@ -234,6 +287,7 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
         for (String start : output) {
             if (start.equals(text)) {
                 index = counter;
+                break;
             }
             counter++;
         }
