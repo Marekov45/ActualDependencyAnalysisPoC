@@ -305,7 +305,7 @@ public class ActualDependencyAnalyserPlugin extends AbstractAnalyzeMojo {
         }
         BufferedWriter writer = null;
         try {
-            writer = new BufferedWriter(new FileWriter("C://Users//Marvin//Documents//Studium//BACHELOR THESIS/" + "/report.csv"));git add .
+            writer = new BufferedWriter(new FileWriter("C://Users//Marvin//Documents//Studium//BACHELOR THESIS/" + "/report.csv"));
             for (String string : lines) {
                 writer.write(string);
                 writer.newLine();
