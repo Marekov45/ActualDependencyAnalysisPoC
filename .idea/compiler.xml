@@ -10,11 +10,13 @@
         <module name="actual-dependency-analyzer" />
         <module name="actual-dependency-analysis-stats-generator" />
         <module name="wolvesdomain" />
-        <module name="wolves-domain" />
         <module name="actualdependencyanalysisstatsgenerator" />
         <module name="actualdependencyanalyzer" />
         <module name="actual-dependency-analysis-result-consumer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="wolves-domain" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
